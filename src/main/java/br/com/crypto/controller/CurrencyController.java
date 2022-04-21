@@ -34,14 +34,14 @@ public class CurrencyController {
     // Single item
 
     @GetMapping("/currencies/{id}")
-    Currency one(@PathVariable Long id) {
+    Currency one(@PathVariable UUID id) {
 
         return repository.findById(id)
                 .orElseThrow(() -> new CurrencyNotFoundException(id));
     }
 
 //    @PutMapping("/currencies/{id}")
-//    Currency replaceCurrency(@RequestBody Currency newCurrency, @PathVariable Long id) {
+//    Currency replaceCurrency(@RequestBody Currency newCurrency, @PathVariable UUID id) {
 //
 //        return repository.findById(id)
 //                .map(employee -> {
