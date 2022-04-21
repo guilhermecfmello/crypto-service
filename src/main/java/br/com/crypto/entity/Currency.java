@@ -15,6 +15,7 @@ public class Currency {
 
     private String code;
 
+    @Column(name="createdat")
     private String createdAt;
 
     public UUID getId() {
