@@ -23,3 +23,12 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+flyway {
+	url = 'jdbc:postgresql://localhost:5432/crypto'
+	user = 'postgres'
+	password = 'postgres'
+	locations = ['classpath:db.migration']
+}
+
+flywayMigrate.dependsOn classes
