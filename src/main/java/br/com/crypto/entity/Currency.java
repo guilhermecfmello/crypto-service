@@ -11,6 +11,7 @@ public class Currency {
     @Column(name = "id", nullable = false)
     private UUID id;
 
+    @Column(name="name")
     private String name;
 
     private String code;
@@ -26,6 +27,17 @@ public class Currency {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
 }
 
 //    name VARCHAR(45),
