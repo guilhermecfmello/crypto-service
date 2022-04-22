@@ -40,21 +40,6 @@ public class CurrencyController {
                 .orElseThrow(() -> new CurrencyNotFoundException(id));
     }
 
-//    @PutMapping("/currencies/{id}")
-//    Currency replaceCurrency(@RequestBody Currency newCurrency, @PathVariable UUID id) {
-//
-//        return repository.findById(id)
-//                .map(employee -> {
-//                    employee.setName(newCurrency.getName());
-//                    employee.setRole(newCurrency.getRole());
-//                    return repository.save(employee);
-//                })
-//                .orElseGet(() -> {
-//                    newCurrency.setId(id);
-//                    return repository.save(newCurrency);
-//                });
-//    }
-
     @DeleteMapping("/currencies/{id}")
     void deleteCurrency(@PathVariable UUID id) {
         repository.deleteById(id);
