@@ -6,6 +6,7 @@ import br.com.crypto.repository.CurrencyRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RestController
@@ -44,4 +45,20 @@ public class CurrencyController {
     void deleteCurrency(@PathVariable UUID id) {
         repository.deleteById(id);
     }
+
+    @PutMapping("/currencies/{id}")
+    Currency replaceCurrency(@RequestBody Currency newCurrency, @PathVariable UUID id){
+        return repository.findById(id)
+            .map(
+                currency -> {
+                    currency.setName(newCurrency.getName());
+                    currency.setCode(newCurrency.getCode());
+                    return repository.save(currency);
+                })
+                .orElseGet(() -> {
+                    newCurrency.setId(id);
+                    return repository.save(newCurrency);
+                });
+    }
+
 }
