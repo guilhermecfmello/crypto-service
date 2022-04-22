@@ -11,13 +11,17 @@ public class Currency {
     @Column(name = "id", nullable = false)
     private UUID id;
 
-    @Column(name="name")
     private String name;
 
     private String code;
 
     @Column(name="createdat")
     private String createdAt;
+
+    public Currency(String name, String code) {
+        this.name = name;
+        this.code = code;
+    }
 
     public UUID getId() {
         return id;
@@ -39,7 +43,3 @@ public class Currency {
         return createdAt;
     }
 }
-
-//    name VARCHAR(45),
-//    code VARCHAR(45),
-//    createdAt TIMESTAMP
