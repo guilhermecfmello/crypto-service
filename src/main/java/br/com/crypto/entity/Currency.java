@@ -15,12 +15,16 @@ public class Currency {
 
     private String code;
 
-    @Column(name="createdat")
+    @Column(name="createdat", insertable = false, updatable = false)
     private String createdAt;
 
     public Currency(String name, String code) {
         this.name = name;
         this.code = code;
+    }
+
+    public Currency() {
+
     }
 
     public UUID getId() {
