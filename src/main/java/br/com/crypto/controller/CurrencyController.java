@@ -19,11 +19,10 @@ public class CurrencyController {
         this.repository = repository;
     }
 
-
     // Aggregate root
     // tag::get-aggregate-root[]
     @GetMapping("/currencies")
-    List<Currency> all() {
+    List<CurrencyDTO> all() {
         return repository.findAll();
     }
     // end::get-aggregate-root[]
