@@ -1,4 +1,4 @@
-package br.com.crypto.entity;
+package br.com.crypto.repository.entity;
 
 import javax.persistence.*;
 import java.util.UUID;
