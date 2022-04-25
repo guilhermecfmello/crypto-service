@@ -16,6 +16,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.7'
+    implementation 'org.projectlombok:lombok:1.18.20'
+	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
