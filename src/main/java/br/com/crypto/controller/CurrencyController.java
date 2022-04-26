@@ -4,24 +4,30 @@ import br.com.crypto.controller.dto.CurrencyDTO;
 import br.com.crypto.controller.mapper.CurrencyResponseMapper;
 import br.com.crypto.repository.entity.Currency;
 import br.com.crypto.service.CreateCurrencyService;
+import br.com.crypto.service.GetCurrencyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
 public class CurrencyController {
 
-    private final CreateCurrencyService service;
+    private final CreateCurrencyService createService;
 
-//    @GetMapping("/currencies")
-//    List<CurrencyDTO> all() { return Mapper.currencyEntityListToCurrencyDTOList( repository.findAll()); }
+    private final GetCurrencyService getService;
+
+    @GetMapping("/currencies")
+    List<CurrencyDTO> all() {
+        return CurrencyResponseMapper.INSTANCE.currencyListDomainToDto(getService.getAll());
+    }
 
     @PostMapping("/currencies")
     CurrencyDTO newCurrency(@RequestBody CurrencyDTO newCurrency) {
         var currencyDomain = CurrencyResponseMapper.INSTANCE.currencyDtoToDomain(newCurrency);
-        var currencyDomainSaved = service.execute(currencyDomain);
+        var currencyDomainSaved = createService.execute(currencyDomain);
         return CurrencyResponseMapper.INSTANCE.currencyDomainToDto(currencyDomainSaved);
     }
 
