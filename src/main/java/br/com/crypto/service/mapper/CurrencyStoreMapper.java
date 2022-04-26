@@ -5,13 +5,13 @@ import br.com.crypto.service.domain.CurrencyDomain;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface CurrencyStoreMapper {
 
     CurrencyStoreMapper INSTANCE = Mappers.getMapper( CurrencyStoreMapper.class );
 
     Currency currencyDomainToEntity(CurrencyDomain currencyDomain);
 
-    Currency currencyEntityToDomain(Currency currencyEntity);
+    CurrencyDomain currencyEntityToDomain(Currency currencyEntity);
 
 }

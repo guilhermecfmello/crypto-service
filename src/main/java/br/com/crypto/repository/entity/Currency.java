@@ -1,10 +1,15 @@
 package br.com.crypto.repository.entity;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
+@Data
 @Table(name = "currency")
+@RequiredArgsConstructor
 public class Currency {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,35 +32,4 @@ public class Currency {
         this.code = code;
     }
 
-    public Currency() {
-
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
 }

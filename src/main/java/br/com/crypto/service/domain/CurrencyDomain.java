@@ -5,8 +5,9 @@ import lombok.Data;
 
 import java.util.UUID;
 
+
+//@Builder
 @Data
-@Builder
 public class CurrencyDomain {
 
     private UUID id;
@@ -17,8 +18,8 @@ public class CurrencyDomain {
 
     private String createdAt;
 
-    public void test (){
-        CurrencyDomain.builder().code("CurrencyCode").build();
-    }
+//    public void test (){
+//        CurrencyDomain.builder().code("CurrencyCode").build();
+//    }
 
 }
