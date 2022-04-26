@@ -42,10 +42,8 @@ public class CurrencyController {
     // Single item
 
     @GetMapping("/currencies/{id}")
-    Currency one(@PathVariable UUID id) {
-        return null;
-//        return repository.findById(id)
-//                .orElseThrow(() -> new CurrencyNotFoundException(id));
+    CurrencyDTO one(@PathVariable UUID id) {
+        return CurrencyResponseMapper.INSTANCE.currencyDomainToDto(getService.getOne(id));
     }
 
     @DeleteMapping("/currencies/{id}")
@@ -53,8 +51,6 @@ public class CurrencyController {
         deleteService.execute(id);
     }
 
-    //TODO validate json input in case that name or code is null
-    // maybe its done through model class
     @PutMapping("/currencies/{id}")
     CurrencyDTO replaceCurrency(@Valid @RequestBody CurrencyDTO newCurrency, @PathVariable UUID id){
         var currency = updateService.execute(id, CurrencyResponseMapper.INSTANCE.currencyDtoToDomain(newCurrency));
