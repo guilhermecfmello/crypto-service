@@ -1,7 +1,7 @@
-package br.com.crypto.service.mapper;
+package br.com.crypto.service.currency.mapper;
 
 import br.com.crypto.repository.entity.Currency;
-import br.com.crypto.service.domain.CurrencyDomain;
+import br.com.crypto.service.currency.domain.CurrencyDomain;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

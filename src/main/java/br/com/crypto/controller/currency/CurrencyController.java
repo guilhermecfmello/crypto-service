@@ -1,12 +1,11 @@
-package br.com.crypto.controller;
+package br.com.crypto.controller.currency;
 
-import br.com.crypto.controller.dto.CurrencyDTO;
-import br.com.crypto.controller.mapper.CurrencyResponseMapper;
-import br.com.crypto.repository.entity.Currency;
-import br.com.crypto.service.CreateCurrencyService;
-import br.com.crypto.service.DeleteCurrencyService;
-import br.com.crypto.service.GetCurrencyService;
-import br.com.crypto.service.UpdateCurrencyService;
+import br.com.crypto.controller.currency.dto.CurrencyDTO;
+import br.com.crypto.controller.currency.mapper.CurrencyResponseMapper;
+import br.com.crypto.service.currency.CreateCurrencyService;
+import br.com.crypto.service.currency.DeleteCurrencyService;
+import br.com.crypto.service.currency.GetCurrencyService;
+import br.com.crypto.service.currency.UpdateCurrencyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

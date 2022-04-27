@@ -1,4 +1,4 @@
-package br.com.crypto.service;
+package br.com.crypto.service.currency;
 
 import br.com.crypto.repository.CurrencyRepository;
 import lombok.RequiredArgsConstructor;

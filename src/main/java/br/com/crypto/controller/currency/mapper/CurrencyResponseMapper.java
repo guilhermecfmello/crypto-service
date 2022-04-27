@@ -1,7 +1,7 @@
-package br.com.crypto.controller.mapper;
+package br.com.crypto.controller.currency.mapper;
 
-import br.com.crypto.controller.dto.CurrencyDTO;
-import br.com.crypto.service.domain.CurrencyDomain;
+import br.com.crypto.controller.currency.dto.CurrencyDTO;
+import br.com.crypto.service.currency.domain.CurrencyDomain;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
