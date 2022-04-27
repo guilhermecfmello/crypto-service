@@ -1,4 +1,4 @@
-package br.com.crypto.controller.dto;
+package br.com.crypto.controller.currency.dto;
 
 import lombok.Data;
 

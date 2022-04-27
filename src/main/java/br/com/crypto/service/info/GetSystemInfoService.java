@@ -1,12 +1,10 @@
-package br.com.crypto.service;
+package br.com.crypto.service.info;
 
-import br.com.crypto.service.domain.HeaderInfo;
-import br.com.crypto.service.domain.SystemInfo;
+import br.com.crypto.service.info.domain.HeaderInfo;
+import br.com.crypto.service.info.domain.SystemInfo;
 import org.springframework.boot.system.JavaVersion;
 import org.springframework.core.SpringVersion;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class GetSystemInfoService {

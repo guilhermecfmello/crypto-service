@@ -1,4 +1,4 @@
-package br.com.crypto.service.domain;
+package br.com.crypto.service.info.domain;
 
 import lombok.Data;
 import lombok.NonNull;

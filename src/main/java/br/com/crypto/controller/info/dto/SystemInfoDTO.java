@@ -1,6 +1,6 @@
-package br.com.crypto.controller.dto;
+package br.com.crypto.controller.info.dto;
 
-import br.com.crypto.service.domain.HeaderInfo;
+import br.com.crypto.service.info.domain.HeaderInfo;
 import lombok.Data;
 import lombok.NonNull;
 

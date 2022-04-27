@@ -1,6 +1,6 @@
 package br.com.crypto.mapper;
 
-import br.com.crypto.service.domain.CurrencyDomain;
+import br.com.crypto.service.currency.domain.CurrencyDomain;
 import org.junit.jupiter.api.Test;
 import java.util.UUID;
 

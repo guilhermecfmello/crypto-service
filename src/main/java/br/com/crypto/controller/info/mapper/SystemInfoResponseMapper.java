@@ -1,7 +1,7 @@
-package br.com.crypto.controller.mapper;
+package br.com.crypto.controller.info.mapper;
 
-import br.com.crypto.controller.dto.SystemInfoDTO;
-import br.com.crypto.service.domain.SystemInfo;
+import br.com.crypto.controller.info.dto.SystemInfoDTO;
+import br.com.crypto.service.info.domain.SystemInfo;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;

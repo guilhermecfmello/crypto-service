@@ -1,4 +1,4 @@
-package br.com.crypto.service.domain;
+package br.com.crypto.service.currency.domain;
 
 import lombok.Builder;
 import lombok.Data;

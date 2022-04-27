@@ -1,10 +1,9 @@
-package br.com.crypto.controller;
+package br.com.crypto.controller.info;
 
-import br.com.crypto.controller.dto.SystemInfoDTO;
-import br.com.crypto.controller.mapper.SystemInfoResponseMapper;
-import br.com.crypto.service.GetSystemInfoService;
+import br.com.crypto.controller.info.dto.SystemInfoDTO;
+import br.com.crypto.controller.info.mapper.SystemInfoResponseMapper;
+import br.com.crypto.service.info.GetSystemInfoService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.SpringVersion;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

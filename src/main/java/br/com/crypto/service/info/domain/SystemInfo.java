@@ -1,10 +1,9 @@
-package br.com.crypto.service.domain;
+package br.com.crypto.service.info.domain;
 
 import lombok.Data;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
